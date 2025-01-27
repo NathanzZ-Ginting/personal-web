@@ -39,6 +39,15 @@ export default {
           tech: 'Codeigniter 3, Bootstrap',
           github: 'null',
           demo: 'null'
+        },
+        {
+          id: 6,
+          name: 'APPLECLONE',
+          imageUrl: 'public/img/portofolio-appleclone.png',
+          status: 'Sistem Percepatan Pelayanan Surat Elektronik, A web application to manage letters in the village.',
+          tech: 'Codeigniter 3, Bootstrap',
+          github: 'null',
+          demo: 'null'
         }
       ]
     };
