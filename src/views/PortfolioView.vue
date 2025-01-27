@@ -5,13 +5,22 @@ export default {
       activeTab: 1,
       items: [
         {
+          id: 1,
+          name: 'Bumdesma',
+          imageUrl: 'bumdesma',
+          status: 'a web application used by village-owned enterprises at the sub-district level to make it easier for them in terms of accounting that is equipped with a microfinance balance.',
+          tech: 'Laravel 8, Bootstrap',
+          github: 'null',
+          demo: 'null'
+        },
+        {
           id: 2,
           name: 'Sahabat Muslim',
           imageUrl: 'sahabatmuslim',
           status: 'A website that has a responsive display to make it easier for Muslims to read the Quran from anywhere.',
           tech: 'VueJS 3, Tailwind',
           github: 'null',
-          demo: 'https://sahabat-muslim.netlify.app/'
+          demo: 'null'
         },
         {
           id: 3,
