@@ -20,7 +20,7 @@ export default {
           status: 'A website that has a responsive display to make it easier for Muslims to read the Quran from anywhere.',
           tech: 'VueJS 3, Tailwind',
           github: 'null',
-          demo: 'null'
+          demo: 'https://sahabat-muslim.netlify.app/'
         },
         {
           id: 3,
@@ -49,15 +49,6 @@ export default {
           github: 'null',
           demo: 'null'
         },
-        {
-          id: 6,
-          name: 'APPLECLONE',
-          imageUrl: 'public/img/portofolio-appleclone.png',
-          status: 'Sistem Percepatan Pelayanan Surat Elektronik, A web application to manage letters in the village.',
-          tech: 'Codeigniter 3, Bootstrap',
-          github: 'null',
-          demo: 'null'
-        }
       ]
     };
   }
