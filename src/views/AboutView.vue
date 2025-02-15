@@ -128,13 +128,20 @@ export default {
         </div>
         <div class="md:w-7/12">
           <p class="mb-3 md:mb-7 fadein-left fadeins-1">
-            &nbsp; &nbsp; &nbsp; Halo, saya Joenathan Haganta Ginting!
-            Saya adalah seorang Fullstack Developer dan Software Engineer berpengalaman yang memiliki passion dalam membangun aplikasi web dan mobile yang inovatif dan berkualitas tinggi. Dengan latar belakang profesional yang kuat dan dedikasi terhadap teknologi modern, saya telah bekerja di berbagai proyek besar, termasuk aplikasi perbankan seperti Livin’ Mandiri, platform e-commerce, dan aplikasi profil perusahaan.
+            &nbsp; &nbsp; &nbsp; I am Joenathan Haganta Ginting, a Fullstack Developer, Software Engineer, Instructor & Mentor, and Tech Enthusiast with extensive experience in both mobile and web development.
+
+As a technology professional, I have actively contributed as a Mobile Programming Mentor & Instructor at Dunia Coding and an Information Technology Instructor at Superprof. Additionally, I serve as a General Mentor at the CompeteMate GDGOC Gunadarma University competition, guiding participants in enhancing their skills and strategies in programming and software engineering.
           </p>
           <p class="mb-3 fadein-left fadeins-2">
-            &nbsp; &nbsp; &nbsp; Dengan keahlian dalam teknologi seperti React, Vue, Flutter, Node.js, dan Tailwind CSS, saya memiliki pengalaman bekerja di perusahaan ternama seperti Bank Mandiri dan Fundex, serta mengembangkan solusi perangkat lunak yang efisien dan berdampak.
+            &nbsp; &nbsp; &nbsp; Currently, I work as a Full-time Mobile Developer while also handling various projects as a Freelance Web Application Developer and Fullstack Web Developer. With a strong technical background, I have earned several professional certifications, including:
+✅ Fullstack Web Developer – Rakamin
+✅ Mobile Apps Engineer – Amazon Web Services (AWS)
+✅ Cloud Engineer – Alibaba Cloud
+✅ Software Developer – Microsoft Azure
 
-Saya percaya bahwa teknologi dapat menciptakan perubahan besar, dan saya selalu berusaha untuk berinovasi melalui pekerjaan saya. Selain itu, saya menikmati berbagi ilmu dengan komunitas dan terus belajar untuk tetap relevan di industri teknologi yang terus berkembang.
+Beyond software development, I have published several articles on software engineering and received multiple awards in technology Olympiads.
+
+With a passion for knowledge-sharing and continuous growth, I am committed to delivering innovative solutions in technology and helping fellow developers unlock their full potential. 🚀
           </p>
         </div>
 
