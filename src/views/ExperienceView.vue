@@ -52,18 +52,39 @@
       description: "Building and maintaining high-performance mobile applications."
     },
     {
-      title: "General Mentor",
-      company: "Google Developers Group Gunadarma",
-      year: "2024",
+      title: "General Mentor at CompeteMate 2025",
+      company: "Google Developers Group Gunadarma University",
+      year: "2025 - Present",
       status: "Freelance",
       description: "Providing guidance and mentoring for aspiring developers."
     },
     {
-      title: "Instructor & Mentor",
-      company: "Dunia Coding & Superprof",
-      year: "2023 - Present",
+      title: "Mobile Programming Mentor and Instructor ",
+      company: "Dunia Coding",
+      year: "Jan 2025 - Present",
       status: "Part-time",
       description: "Teaching and mentoring students in software engineering and development."
+    },
+    {
+    title: "Information Technology Instructor",
+    company: "Superprof",  
+    year: "Feb 2025 - Present",
+    status: "Part-time",
+    description: "Teaching and mentoring students in software engineering and development."
+    },
+    {
+      title: "Web Application Developer",
+      company: "FundEx.ID",
+      year: "Feb 2023 - Jan 2025",
+      status: "Freelance",
+      description: "Building and maintaining high-performance web applications."
+    },
+    {
+      title: "Fullstack Web Application Developer",
+      company: "FundEx.ID",
+      year: "Jan 2025 - Present",
+      status: "Freelance",
+      description: "Building and maintaining high-performance web applications."
     }
   ];
   
