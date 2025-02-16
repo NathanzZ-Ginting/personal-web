@@ -33,11 +33,17 @@ const routes = [
     meta: { title: 'Blog' }
   },
   {
+    path: '/awards',
+    name: 'awards',
+    component: () => import('../views/AwardsView.vue'),
+    meta: { title: 'Awards' }
+  },
+  {
     path: '/read/:slug/:id',
     name: 'articleDetail',
     component: () => import('../views/ArticleView.vue'),
     meta: { title: 'Blog' }
-  }
+  },
 ]
 
 const router = createRouter({

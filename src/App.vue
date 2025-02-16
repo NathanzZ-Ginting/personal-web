@@ -16,7 +16,7 @@
             <li><router-link to="/" class="fadein-bot text-white hover:text-gray-400">Home</router-link></li>
             <li><router-link to="/about" class="fadein-bot text-white hover:text-gray-400">About</router-link></li>
             <li><router-link to="/experience" class="fadein-bot text-white hover:text-gray-400">Experience</router-link></li>
-            
+            <li><router-link to="/awards" class="fadein-bot text-white hover:text-gray-400">Awards</router-link></li>
             <li><router-link to="/portfolio" class="fadein-bot text-white hover:text-gray-400">Portfolio</router-link></li>
             <li><router-link to="/blog" class="fadein-bot text-white hover:text-gray-400">Blog</router-link></li>
           </ul>
