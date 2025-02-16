@@ -15,7 +15,7 @@
           <ul class="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
             <li><router-link to="/" class="fadein-bot text-white hover:text-gray-400">Home</router-link></li>
             <li><router-link to="/about" class="fadein-bot text-white hover:text-gray-400">About</router-link></li>
-            <li><router-link to="/experience" class="fadein-bot text-white hover:text-gray-400">Experience</router-link></li>
+            <li><router-lik to="/experience" class="fadein-bot text-white hover:text-gray-400">Experience</router-lik></li>
             <li><router-link to="/portfolio" class="fadein-bot text-white hover:text-gray-400">Portfolio</router-link></li>
             <li><router-link to="/blog" class="fadein-bot text-white hover:text-gray-400">Blog</router-link></li>
           </ul>
