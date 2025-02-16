@@ -1,78 +1,73 @@
 <template>
-  <main
-    class="mt-10 md:mt-1 flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[80vh]">
-    <div class="space-y-2 text-center md:text-left px-10">
+  <main class="mt-10 md:mt-1 flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[80vh]">
+    <div ref="textContainer" class="space-y-2 text-center md:text-left px-10 opacity-0">
       <p class="text-amber-200">Hello World, I'm</p>
-      <h1 class="text-4xl font-bold md:text-5xl text-white fadein-up">Joenathan Haganta Ginting</h1>
+      <h1 ref="name" class="text-4xl font-bold md:text-5xl text-white">Joenathan Haganta Ginting</h1>
       <div class="py-2">
-        <h1
-          class="typewrite text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-yellow-500 md:text-2xl fadein-up"
-          ref="typewriter">
-          <span class="wrap">{{ txt }}</span>
+        <h1 ref="title" class="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-yellow-500 md:text-2xl">
+          Fullstack Developer & Software Engineer
         </h1>
       </div>
-      <p class="text-white pr-4 fade-in-from-left">Welcome to My personal website. <span class="wave">👋🏼</span></p>
-      <br>
+      <p ref="subtitle" class="text-white pr-4">Welcome to My personal website. <span class="wave">👋🏼</span></p>
     </div>
-    <div class="flex justify-center md:justify-start fadein-right"><img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"
+    <div ref="imageContainer" class="flex justify-center md:justify-start opacity-0">
+      <img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async"
         class="w-10/12 md:h-auto rounded-full border-4 border-amber-200 pict" src="ink.png">
     </div>
   </main>
 </template>
 
 <script>
+import gsap from "gsap";
+
 export default {
   name: 'HomeView',
-  data() {
-    return {
-      toRotate: ["Fullstack Developer", "Software Engineer", "High School Student", "Tech Enthusiast"],
-      period: 2000,
-      txt: '',
-      loopNum: 0,
-      isDeleting: false,
-    };
-  },
   mounted() {
-    this.$nextTick(() => {
-      this.tick();
-    });
+    this.animateElements();
   },
   methods: {
-    tick() {
-      let typewriter = this.$refs.typewriter;
+    animateElements() {
+      gsap.to(this.$refs.textContainer, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out"
+      });
 
-      if (!typewriter) {
-        return;
-      }
+      gsap.from(this.$refs.name, {
+        opacity: 0,
+        y: -50,
+        duration: 1.2,
+        delay: 0.2,
+        ease: "power3.out"
+      });
 
-      let i = this.loopNum % this.toRotate.length;
-      let fullTxt = this.toRotate[i];
+      gsap.from(this.$refs.title, {
+        opacity: 0,
+        x: -100,
+        duration: 1.2,
+        delay: 0.4,
+        ease: "power3.out"
+      });
 
-      this.txt = this.isDeleting ? fullTxt.substring(0, this.txt.length - 1) : fullTxt.substring(0, this.txt.length + 1);
-      typewriter.innerHTML = `<span class="wrap">${this.txt}</span>`;
+      gsap.from(this.$refs.subtitle, {
+        opacity: 0,
+        x: 100,
+        duration: 1.2,
+        delay: 0.6,
+        ease: "power3.out"
+      });
 
-      let that = this;
-      let delta = 200 - Math.random() * 100;
-
-      if (this.isDeleting) {
-        delta /= 2;
-      }
-
-      if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-      } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-      }
-
-      setTimeout(() => {
-        that.tick();
-      }, delta);
-    },
+      gsap.to(this.$refs.imageContainer, {
+        opacity: 1,
+        scale: 1,
+        duration: 1.5,
+        delay: 0.8,
+        ease: "power3.out"
+      });
+    }
   }
-}
+};
 </script>
 
 <style>
@@ -81,139 +76,22 @@ body {
   overflow-x: hidden;
 }
 
-.typewrite>.wrap {
-  border-right: 0.08em solid #fff;
-}
-
 .wave {
-  animation-name: wave-animation;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
+  animation: wave-animation 2.5s infinite;
   transform-origin: 70% 70%;
-  display: inline-block
+  display: inline-block;
 }
 
 @keyframes wave-animation {
-  0% {
-    transform: rotate(0deg)
-  }
-
-  10% {
-    transform: rotate(14deg)
-  }
-
-  20% {
-    transform: rotate(-8deg)
-  }
-
-  30% {
-    transform: rotate(14deg)
-  }
-
-  40% {
-    transform: rotate(-4deg)
-  }
-
-  50% {
-    transform: rotate(10deg)
-  }
-
-  60% {
-    transform: rotate(0deg)
-  }
-
-  to {
-    transform: rotate(0deg)
-  }
+  0%, 60%, 100% { transform: rotate(0deg); }
+  10%, 30% { transform: rotate(14deg); }
+  20%, 40% { transform: rotate(-8deg); }
+  50% { transform: rotate(10deg); }
 }
 
 .pict {
-  box-shadow: 0px 0px 73px -9px rgba(255,219,112,0.44);
--webkit-box-shadow: 0px 0px 73px -9px rgba(255,219,112,0.44);
--moz-box-shadow: 0px 0px 73px -9px rgba(255,219,112,0.44);
-}
-
-.fadein-up {
-  opacity: 0;
-  animation-name: fadeInUp;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-delay: 500ms;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fade-in-from-left {
-  opacity: 0;
-  animation: fadeInLeft 0.5s ease-out forwards;
-  animation-delay: 500ms;
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.fadein-right {
-  opacity: 0;
-  animation: fadeInRight 0.5s ease-out forwards;
-  animation-delay: 500ms;
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.fadein-bot {
-  opacity: 0;
-  animation: fadeInBot 0.5s forwards;
-}
-
-@keyframes fadeInBot {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadein-1 {
-  animation-delay: 200ms;
-}
-.fadein-2 {
-  animation-delay: 400ms;
-}
-.fadein-3 {
-  animation-delay: 600ms;
-}
-.fade-500 {
-  animation-delay: 500ms;
+  box-shadow: 0px 0px 73px -9px rgba(255, 219, 112, 0.44);
+  -webkit-box-shadow: 0px 0px 73px -9px rgba(255, 219, 112, 0.44);
+  -moz-box-shadow: 0px 0px 73px -9px rgba(255, 219, 112, 0.44);
 }
 </style>
