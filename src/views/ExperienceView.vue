@@ -38,50 +38,50 @@
   
   const experiences = [
     {
-      title: "Frontend Web Developer",
-      company: "Core Initiative Studio",
+      title: "Lorem",
+      company: "Lorem",
       year: "Okt 2023 - Jan 2024",
       status: "Internship",
       description: "Developing scalable web applications and ensuring smooth deployment."
     },
     {
-      title: "Mobile Apps Engineer",
-      company: "Modeza",
+      title: "Lorem",
+      company: "Lorem",
       year: "2023 - Present",
       status: "Full-time",
       description: "Building and maintaining high-performance mobile applications."
     },
     {
-      title: "General Mentor at CompeteMate 2025",
-      company: "Google Developers Group Gunadarma University",
+      title: "Lorem",
+      company: "Lorem",
       year: "2025 - Present",
       status: "Freelance",
       description: "Providing guidance and mentoring for aspiring developers."
     },
     {
-      title: "Mobile Programming Mentor and Instructor ",
-      company: "Dunia Coding",
+      title: "Lorem",
+      company: "Lorem",
       year: "Jan 2025 - Present",
       status: "Part-time",
       description: "Teaching and mentoring students in software engineering and development."
     },
     {
-    title: "Information Technology Instructor",
-    company: "Superprof",  
+    title: "Lorem",
+    company: "Lorem",  
     year: "Feb 2025 - Present",
     status: "Part-time",
     description: "Teaching and mentoring students in software engineering and development."
     },
     {
-      title: "Web Application Developer",
-      company: "FundEx.ID",
+      title: "Lorem",
+      company: "Lorem",
       year: "Feb 2023 - Jan 2025",
       status: "Freelance",
       description: "Building and maintaining high-performance web applications."
     },
     {
-      title: "Fullstack Web Application Developer",
-      company: "FundEx.ID",
+      title: "Lorem",
+      company: "Lorem",
       year: "Jan 2025 - Present",
       status: "Freelance",
       description: "Building and maintaining high-performance web applications."
