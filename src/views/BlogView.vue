@@ -1,104 +1,87 @@
 <template>
-  <div class="container mx-auto p-3 md:p-8">
-    <div class="flex flex-col-reverse md:flex-row relative">
-      <div class="w-full md:w-2/3">
-        <div class="flex flex-col gap-4 md:px-20 fade-zoom-up">
-          <article v-for="article in articles" :key="article.id">
-            <router-link :to="`/read/${article.slug}/${article.id}`" class="flex w-full bg-[#1e1e1f] border-[#383838] rounded-xl text-left text-white p-5 md:py-7 md:px-8 cursor-pointer hover:bg-[#282828] items-center">
-              <div class="w-full pr-4">
-                <div class="text-xs mb-1 text-slate-400 flex items-center italic">
-                  <div class="h-[1px] w-20 bg-amber-200 md:w-5 aos-init aos-animate mr-2"></div> {{ article.date }}
-                </div>
-                <h1 class="text-sm md:text-md text-amber-200 font-bold mb-2 paraf">{{ article.title }}</h1>
-                <div class="text-sm hidden md:block paraf">{{ article.desc }}</div>
-              </div>
-              <div>
-                <div class="w-20 h-20 md:w-28 flex items-center md:h-28">
-                  <img :src="article.image" class="rounded-lg md:rounded-xl" alt="">
-                </div>
-              </div>
-            </router-link>
-          </article>
+  <div class="max-w-4xl mx-auto p-6">
+    <div class="flex items-center space-x-4 mb-8">
+      <h1 class="text-3xl font-bold text-white">Awards & Achievements 🏆</h1>
+      <div class="flex-1 border-t border-[#ffdb70]"></div>
+    </div>
+    
+    <div class="space-y-6">
+      <div 
+        v-for="(award, index) in awards" 
+        :key="index" 
+        class="relative p-6 bg-[#121212] shadow-lg rounded-lg border border-gray-700 opacity-0 transform translate-y-10 transition-all duration-700 ease-in-out"
+        :class="{'opacity-100 translate-y-0': isVisible}"
+      >
+        <div class="absolute left-[-10px] top-1/2 transform -translate-y-1/2 w-5 h-5 bg-[#ffdb70] rounded-full"></div>
+        <div class="flex flex-col items-center text-center">
+          <h2 class="text-xl font-semibold text-white">{{ award.title }}</h2>
+          <span class="text-sm font-bold px-3 py-1 rounded-full mt-2 bg-[#ffdb70] text-black">
+            {{ award.year }}
+          </span>
         </div>
-      </div>
-      <div class="w-full md:w-1/3 h-fit p-8 md:sticky md:top-24">
-        <!-- Sidebar -->
-        <div class="flex flex-col text-left">
-          <div class="bg-clip-text bg-gradient-to-r from-slate-100 to-amber-300 text-transparent">Let's share experiences,
-            stories, and knowledge together.
-          </div>
-          <div class="h-[1px] mt-7 mb-7 w-20 bg-amber-200 aos-init aos-animate mr-2"></div>
-          <div class="hidden md:block">
-            <div class="text-white text-md font-semibold">Topics</div>
-            <div class="mt-3 flex flex-wrap gap-1">
-              <span
-                class="py-2 px-3 rounded-2xl bg-[#1e1e1f] hover:bg-white/20 text-white text-xs cursor-pointer">NodeJS</span>
-              <span
-                class="py-2 px-3 rounded-2xl bg-[#1e1e1f] hover:bg-white/20 text-white text-xs cursor-pointer">Technology</span>
-            </div>
-            <!-- <div class="h-[1px] mt-7 mb-7 w-20 bg-amber-200 aos-init aos-animate mr-2"></div>
-            <div class="text-white text-md font-semibold">Popular Articles</div> -->
-
-          </div>
-        </div>
+        <p class="text-gray-400 text-center">{{ award.organization }}</p>
+        <p class="mt-2 text-gray-300 text-center">{{ award.description }}</p>
       </div>
     </div>
   </div>
-  <ArticleList />
 </template>
-  
-<script>
-import ArticleList from '@/components/ArticleList.vue';
-import axios from "axios";
-export default {
-  data() {
-    return {
-      articles: []
-    }
-  },
-  components: {
-    ArticleList
-  },
-  mounted() {
-    this.getArticles();
-  },
-  methods: {
-    async getArticles() {
-      axios.get('https://64a38c9cc3b509573b564183.mockapi.io/api/blog/all')
-        .then(response => {
-          this.articles = response.data;
-        })
-    },
 
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const isVisible = ref(false);
+
+onMounted(() => {
+  setTimeout(() => {
+    isVisible.value = true;
+  }, 300);
+});
+
+const awards = [
+  {
+    title: "Lorem",
+    organization: "Pusat Prestasi Nasional",
+    year: "2024",
+    description: "I am honored to have received the 𝐒𝐢𝐥𝐯𝐞𝐫 𝐌𝐞𝐝𝐚𝐥 in the Informatics Olympiad, where I demonstrated my expertise in developing innovative solutions, including a website dedicated to preserving and sharing historical narratives."
+  },
+  {
+    title: "Lorem",
+    organization: "Pusat Prestasi Nasional",
+    year: "2024",
+    description: "I am proud to have received the 𝐆𝐨𝐥𝐝 𝐌𝐞𝐝𝐚l in the Informatics Olympiad, a recognition of my dedication to mastering the intricacies of computational problem-solving."
+  },
+  {
+    title: "Lorem",
+    organization: "Pusat Prestasi Nasional",
+    year: "2024",
+    description: "I was honored with the 𝐆𝐨𝐥𝐝 𝐌𝐞𝐝𝐚𝐥 in the Informatics Olympiad for demonstrating exceptional problem-solving skills, advanced algorithm design, and programming expertise."
+  },
+  {
+    title: "Lorem",
+    organization: "Pusat Prestasi Nasional",
+    year: "2024",
+    description: "Awarded the 𝐒𝐢𝐥𝐯𝐞𝐫 𝐌𝐞𝐝𝐚𝐥 in the Informatics Olympiad for developing an innovative application that promotes eco-friendly transportation."
+  },
+  {
+    title: "Lorem",
+    organization: "Pusat Prestasi Nasional",
+    year: "2024",
+    description: "proud to have been awarded the 𝐆𝐨𝐥𝐝 𝐌𝐞𝐝𝐚𝐥 in the National Olympiad of Academy, where I showcased my skills in mobile app development and innovative thinking."
+  },
+  {
+    title: "Lorem",
+    organization: "Pusat Prestasi Nasional",
+    year: "2024",
+    description: "honored to have been awarded the 𝐆𝐨𝐥𝐝 𝐌𝐞𝐝𝐚𝐥 in the Informatics Olympiad, a prestigious recognition of my proficiency in computational problem-solving and algorithmic design. This achievement highlights my ability to approach complex challenges with analytical precision and deliver optimal solutions under time constraints."
+  },
+  {
+    title: "Lorem",
+    organization: "Pusat Prestasi Nasional",
+    year: "2024",
+    description: "proud to have earned the 𝐒𝐢𝐥𝐯𝐞𝐫 𝐌𝐞𝐝𝐚𝐥 in the Informatics Olympiad, a testament to my strong foundation in algorithmic thinking and programming. This achievement reflects my ability to solve challenging computational problems efficiently and effectively, while maintaining a high level of performance under competitive conditions."
   }
-}
-
+];
 </script>
 
 <style scoped>
-.paraf {
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-@media (min-width: 768px) { 
-  .paraf {
-    display: -webkit-box;
-  }
-}
-@keyframes fadeZoomUp {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-.fade-zoom-up {
-  animation: fadeZoomUp 1s ease-in-out;
-  /* animation-delay: 1000ms; */
-}
 </style>
