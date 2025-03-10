@@ -27,10 +27,10 @@ const routes = [
     meta: { title: 'Portfolio' }
   },
   {
-    path: '/blog',
-    name: 'blog',
-    component: () => import('../views/BlogView.vue'),
-    meta: { title: 'Blog' }
+    path: '/awards',
+    name: 'awards',
+    component: () => import('../views/AwardsView.vue'),
+    meta: { title: 'Awards' }
   },
   {
     path: '/read/:slug/:id',

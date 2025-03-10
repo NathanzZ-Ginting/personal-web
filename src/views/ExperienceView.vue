@@ -38,7 +38,7 @@
   
   const experiences = [
     {
-      title: "Lorem",
+      title: "General Mentor at CompeteMate GDGoC Gunadarma University",
       company: "Lorem",
       year: "Okt 2023 - Jan 2024",
       status: "Internship",
