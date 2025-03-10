@@ -12,7 +12,7 @@
     </div>
     <div ref="imageContainer" class="flex justify-center md:justify-start opacity-0">
       <img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async"
-        class="w-10/12 md:h-auto rounded-full border-4 border-amber-200 pict" src="ink.png">
+        class="w-10/12 md:h-auto rounded-full border-4 border-amber-200 pict" src="nathan.png">
     </div>
   </main>
 </template>

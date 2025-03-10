@@ -39,53 +39,46 @@
   const experiences = [
     {
       title: "General Mentor at CompeteMate GDGoC Gunadarma University",
-      company: "Lorem",
-      year: "Okt 2023 - Jan 2024",
-      status: "Internship",
-      description: "Developing scalable web applications and ensuring smooth deployment."
-    },
-    {
-      title: "Lorem",
-      company: "Lorem",
-      year: "2023 - Present",
-      status: "Full-time",
-      description: "Building and maintaining high-performance mobile applications."
-    },
-    {
-      title: "Lorem",
-      company: "Lorem",
-      year: "2025 - Present",
-      status: "Freelance",
-      description: "Providing guidance and mentoring for aspiring developers."
-    },
-    {
-      title: "Lorem",
-      company: "Lorem",
-      year: "Jan 2025 - Present",
+      company: "Google Developer Grups On Campus",
+      year: "Feb 2025 - Mar 2025",
       status: "Part-time",
-      description: "Teaching and mentoring students in software engineering and development."
+      description: "Mentoring students in software engineering and development."
     },
     {
-    title: "Lorem",
-    company: "Lorem",  
-    year: "Feb 2025 - Present",
-    status: "Part-time",
-    description: "Teaching and mentoring students in software engineering and development."
+      title: "Mobile Programming Mentor and Instructor",
+      company: "DuniaCoding",
+      year: "Jan 2025 - Present",
+      status: "Part-Time",
+      description: "I have been teaching and guiding participants for one year, providing consultations technical support, and preparation to help them enhance their skills in technology"
     },
     {
-      title: "Lorem",
-      company: "Lorem",
+      title: "Information Technology Instructor",
+      company: "Superprof",
+      year: "Dec 2024 - Present",
+      status: "Freelance",
+      description: "   I provide interactive, project-based learning in programming, mobile development, and software engineering. With real-world experience, I guide students through practical lessons, industry case studies, and personalized mentoring to help them grow and achieve their career goals."
+    },
+    {
+      title: "Web Application Developer",
+      company: "FundEx",
       year: "Feb 2023 - Jan 2025",
       status: "Freelance",
-      description: "Building and maintaining high-performance web applications."
+      description: "Engineered custom web applications from concept to deployment, ensuring scalability and performance."
     },
     {
-      title: "Lorem",
-      company: "Lorem",
-      year: "Jan 2025 - Present",
-      status: "Freelance",
+    title: "Fullstack Web Application Developer",
+    company: "FundEx",  
+    year: "Feb 2025 - Present",
+    status: "Freelance",
+    description: "As a Fullstack Developer, I have worked extensively with various technologies, including HTML, CSS, JavaScript, Bootstrap, React Native (for mobile), PHP Laravel, and Git. During my in-class training, I completed three significant projects, notably developing a library website using PHP Laravel, React.js, and React Native for mobile applications. Over the course of three months, I focused on frontend development, mastering HTML, CSS, JavaScript, and Bootstrap to create responsive and visually appealing user interfaces (UI) for web applications.."
+    },
+    {
+      title: "Mobile Apps Engineer",
+      company: "Modeza",
+      year: "Mei 2024 - Present",
+      status: "Contract",
       description: "Building and maintaining high-performance web applications."
-    }
+    },
   ];
   
   const getStatusClass = (status) => {
