@@ -18,6 +18,7 @@
             <li><router-link to="/experience" class="fadein-bot text-white hover:text-gray-400">Experience</router-link></li>
             <li><router-link to="/portfolio" class="fadein-bot text-white hover:text-gray-400">Portfolio</router-link></li>
             <li><router-link to="/awards" class="fadein-bot text-white hover:text-gray-400">Awards</router-link></li>
+            <li><router-link to="/contact" class="fadein-bot text-white hover:text-gray-400">Contact</router-link></li>
           </ul>
         </div>
       </div>
@@ -37,6 +38,7 @@
       <router-link to="/experience" class="text-gray-300 hover:text-white">Experience</router-link>
       <router-link to="/portfolio" class="text-gray-300 hover:text-white">Portfolio</router-link>
       <router-link to="/awards" class="text-gray-300 hover:text-white">Awards</router-link>
+      <router-link to="/contact" class="text-gray-300 hover:text-white">Contact</router-link>
     </nav>
   </footer>
 </template>

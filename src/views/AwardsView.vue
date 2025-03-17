@@ -39,43 +39,43 @@ onMounted(() => {
 
 const awards = [
   {
-    title: "Lorem",
+    title: "Kompetisi Sains Akademik Nasional",
     organization: "Pusat Prestasi Nasional",
     year: "2024",
     description: "I am honored to have received the 𝐒𝐢𝐥𝐯𝐞𝐫 𝐌𝐞𝐝𝐚𝐥 in the Informatics Olympiad, where I demonstrated my expertise in developing innovative solutions, including a website dedicated to preserving and sharing historical narratives."
   },
   {
-    title: "Lorem",
+    title: "Festival Olimpiade Nasional",
     organization: "Pusat Prestasi Nasional",
     year: "2024",
     description: "I am proud to have received the 𝐆𝐨𝐥𝐝 𝐌𝐞𝐝𝐚l in the Informatics Olympiad, a recognition of my dedication to mastering the intricacies of computational problem-solving."
   },
   {
-    title: "Lorem",
+    title: "Indonesian Youth Science Medical Olympiad",
     organization: "Pusat Prestasi Nasional",
     year: "2024",
     description: "I was honored with the 𝐆𝐨𝐥𝐝 𝐌𝐞𝐝𝐚𝐥 in the Informatics Olympiad for demonstrating exceptional problem-solving skills, advanced algorithm design, and programming expertise."
   },
   {
-    title: "Lorem",
+    title: "INDONESIAN ADVANCE SCIENCE COMPETITION",
     organization: "Pusat Prestasi Nasional",
     year: "2024",
     description: "Awarded the 𝐒𝐢𝐥𝐯𝐞𝐫 𝐌𝐞𝐝𝐚𝐥 in the Informatics Olympiad for developing an innovative application that promotes eco-friendly transportation."
   },
   {
-    title: "Lorem",
+    title: "National Olympiad Of Academic",
     organization: "Pusat Prestasi Nasional",
     year: "2024",
     description: "proud to have been awarded the 𝐆𝐨𝐥𝐝 𝐌𝐞𝐝𝐚𝐥 in the National Olympiad of Academy, where I showcased my skills in mobile app development and innovative thinking."
   },
   {
-    title: "Lorem",
+    title: "Kompetisi Sains Nasional",
     organization: "Pusat Prestasi Nasional",
     year: "2024",
     description: "honored to have been awarded the 𝐆𝐨𝐥𝐝 𝐌𝐞𝐝𝐚𝐥 in the Informatics Olympiad, a prestigious recognition of my proficiency in computational problem-solving and algorithmic design. This achievement highlights my ability to approach complex challenges with analytical precision and deliver optimal solutions under time constraints."
   },
   {
-    title: "Lorem",
+    title: "Olimpiade Sains Pelajar Nasional",
     organization: "Pusat Prestasi Nasional",
     year: "2024",
     description: "proud to have earned the 𝐒𝐢𝐥𝐯𝐞𝐫 𝐌𝐞𝐝𝐚𝐥 in the Informatics Olympiad, a testament to my strong foundation in algorithmic thinking and programming. This achievement reflects my ability to solve challenging computational problems efficiently and effectively, while maintaining a high level of performance under competitive conditions."

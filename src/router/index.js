@@ -33,10 +33,10 @@ const routes = [
     meta: { title: 'Awards' }
   },
   {
-    path: '/read/:slug/:id',
-    name: 'articleDetail',
-    component: () => import('../views/ArticleView.vue'),
-    meta: { title: 'Blog' }
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../components/ContactForm.vue'),
+    meta: { title: 'Contact' }
   },
 ]
 

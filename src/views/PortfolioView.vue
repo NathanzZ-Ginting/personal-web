@@ -25,7 +25,7 @@ export default {
         {
           id: 3,
           name: 'SP2SE',
-          imageUrl: 'portfolio-sp2se.png',
+          imageUrl: 'test.webp',
           status: 'Sistem Percepatan Pelayanan Surat Elektronik, A web application to manage letters in the village.',
           tech: 'Codeigniter 3, Bootstrap',
           github: 'null',
