@@ -17,6 +17,7 @@
     ]
   },
   "exclude": [
-    "src/views/ArticleView.vue"
+    "src/views/ArticleView.vue",
+    "src/views/Login.vue"
   ]
 }

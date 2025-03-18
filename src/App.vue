@@ -3,9 +3,14 @@
   <div class="max-w-7xl mx-auto flex flex-col relative">
     <nav class="max-w-7xl px-5 md:fixed top-0 z-[98] w-full backdrop-blur-md bg-[#121212] bg-opacity-80">
       <div class="container mx-auto flex flex-wrap items-center justify-between">
-        <button @click="redirectToHome" class="flex">
-          <span class="self-center text-lg text-[#ffdb70] font-semibold whitespace-nowrap fadein-bot hover:text-amber-100">Joenathan</span>
-        </button>
+        <div class="flex items-center">
+          <button @click="redirectToHome" class="flex">
+            <span class="self-center text-lg text-[#ffdb70] font-semibold whitespace-nowrap fadein-bot hover:text-amber-100">Joenathan</span>
+          </button>
+          <button @click="toggleChat" class="ml-3 text-sm bg-[#ffdb70] text-black px-3 py-1 rounded-lg hover:bg-amber-100 transition">
+            💬 Chat AI
+          </button>
+        </div>
         <div class="flex md:order-2 fadein-bot">
           <a href="https://github.com/NathanzZ-Ginting">
             <img class="w-9 rounded-full" src="https://seeklogo.com/images/G/github-logo-2E3852456C-seeklogo.com.png" alt="github">
@@ -28,6 +33,11 @@
     <div class="md:mt-[100px]">
       <router-view />
     </div>
+
+    <!-- Chat AI Component -->
+    <div v-if="showChat" class="chat-container">
+      <ChatAI />
+    </div>
   </div>
 
   <!-- Footer Mobile -->
@@ -44,85 +54,33 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import { useRouter } from "vue-router";
+import ChatAI from "./components/ChatAI.vue";
 
 const router = useRouter();
 const redirectToHome = () => {
   router.push("/");
 };
+
+// Toggle Chat AI
+const showChat = ref(false);
+const toggleChat = () => {
+  showChat.value = !showChat.value;
+};
 </script>
 
-<style>
-/* General Reset */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: hsl(240, 1%, 17%);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #ffdb70;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-button {
-  width: 20px;
-}
-
-/* Body Styling */
-body {
-  font-family: 'Poppins', sans-serif;
-  background: hsl(0, 0%, 7%);
-  text-align: center;
-  color: #fff;
-  height: 100vh;
-}
-
-/* Navbar Styling */
-nav {
-  padding: 20px;
-}
-
-nav a {
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a.router-link-exact-active {
-  color: #ffdb70;
-}
-
-nav a.router-link-exact-active::after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 3px;
-  background-color: #ffdb70;
-  border-radius: 2px;
-  margin-top: 5px;
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+<style scoped>
+/* Styling untuk Chat AI */
+.chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0px 0px 10px rgba(255, 255, 112, 0.6);
 }
 </style>

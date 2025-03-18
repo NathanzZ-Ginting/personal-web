@@ -1,40 +1,45 @@
 <template>
-  <div class="max-w-md mx-auto bg-gray-900 p-6 rounded-lg shadow-lg text-white">
-    <h2 class="text-2xl font-semibold mb-4 text-center">Hubungi Saya</h2>
+  <div class="max-w-lg mx-auto bg-[#121212] p-8 rounded-2xl shadow-2xl text-white border border-[#383838]">
+    <h2 class="text-3xl font-bold mb-6 text-center text-[#ffdb70]">Hubungi Saya</h2>
     
-    <form @submit.prevent="sendMessage" class="space-y-4">
-      <input 
-        v-model="formData.name"
-        type="text"
-        placeholder="Nama"
-        required
-        class="w-full p-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-      />
+    <form @submit.prevent="sendMessage" class="space-y-6">
+      <div class="relative">
+        <input 
+          v-model="formData.name"
+          type="text"
+          placeholder="Nama"
+          required
+          class="w-full p-4 rounded-lg bg-[#1e1e1e] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#ffdb70] focus:ring-opacity-50 transition duration-300"
+        />
+      </div>
 
-      <input 
-        v-model="formData.email"
-        type="email"
-        placeholder="Email"
-        required
-        class="w-full p-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-      />
+      <div class="relative">
+        <input 
+          v-model="formData.email"
+          type="email"
+          placeholder="Email"
+          required
+          class="w-full p-4 rounded-lg bg-[#1e1e1e] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#ffdb70] focus:ring-opacity-50 transition duration-300"
+        />
+      </div>
 
-      <textarea 
-        v-model="formData.message"
-        placeholder="Pesan"
-        required
-        class="w-full p-3 h-32 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-      ></textarea>
+      <div class="relative">
+        <textarea 
+          v-model="formData.message"
+          placeholder="Pesan"
+          required
+          class="w-full p-4 h-32 rounded-lg bg-[#1e1e1e] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#ffdb70] focus:ring-opacity-50 transition duration-300"
+        ></textarea>
+      </div>
 
       <button 
         type="submit" 
-        class="w-full p-3 bg-yellow-500 hover:bg-yellow-600 transition rounded-lg font-semibold text-gray-900"
-      >
-        Kirim
+        class="w-full p-4 bg-[#ffdb70] hover:bg-amber-500 transition duration-300 rounded-lg font-semibold text-[#121212] shadow-lg hover:shadow-2xl">
+        Kirim Pesan
       </button>
     </form>
 
-    <p v-if="successMessage" class="mt-4 text-center text-green-400 font-semibold">
+    <p v-if="successMessage" class="mt-6 text-center text-green-400 font-semibold">
       {{ successMessage }}
     </p>
   </div>

@@ -74,7 +74,10 @@ export default {
 body {
   overflow-y: scroll;
   overflow-x: hidden;
+  background-color: #121212;
+  color: #ffffff;
 }
+
 
 .wave {
   animation: wave-animation 2.5s infinite;
