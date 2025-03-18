@@ -21,7 +21,7 @@ export default {
     return {
       userInput: "",
       messages: [],
-      apiKey: "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", // Ganti dengan API Key yang benar
+      apiKey: "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", // Ganti dengan API Key yang benar
     };
   },
   methods: {
