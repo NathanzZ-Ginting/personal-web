@@ -38,6 +38,7 @@ const routes = [
     component: () => import('../components/ContactForm.vue'),
     meta: { title: 'Contact' }
   },
+
 ]
 
 const router = createRouter({
@@ -46,7 +47,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title + ' - Joenathan Personal'; // Mengambil judul dari meta atau mengatur judul default jika tidak ada
+  document.title = to.meta.title + ' - Personal Websites'; // Mengambil judul dari meta atau mengatur judul default jika tidak ada
   next();
 });
 

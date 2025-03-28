@@ -1,4 +1,4 @@
-<template>
+ang<template>
   <div class="preloader">
     <h1>WELCOME</h1>
   </div>
