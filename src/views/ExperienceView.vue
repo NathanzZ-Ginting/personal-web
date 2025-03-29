@@ -61,7 +61,7 @@
     {
       title: "Web Application Developer",
       company: "FundEx",
-      year: "Feb 2023 - Jan 2025",
+      year: "July 2024 - Jan 2025",
       status: "Freelance",
       description: "Engineered custom web applications from concept to deployment, ensuring scalability and performance."
     },
@@ -74,9 +74,9 @@
     },
     {
       title: "Mobile Apps Engineer",
-      company: "Modeza",
-      year: "Mei 2024 - Present",
-      status: "Contract",
+      company: "PT Bank Mandiri (Persero) Tbk",
+      year: "Oct 2024 - Jan 2025 ",
+      status: "Internship",
       description: "Building and maintaining high-performance web applications."
     },
   ];
