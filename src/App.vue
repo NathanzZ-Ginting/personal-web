@@ -7,9 +7,7 @@
           <button @click="redirectToHome" class="flex">
             <span class="self-center text-lg text-[#ffdb70] font-semibold whitespace-nowrap fadein-bot hover:text-amber-100">Joenathan</span>
           </button>
-          <button @click="toggleChat" class="ml-3 text-sm bg-[#ffdb70] text-black px-3 py-1 rounded-lg hover:bg-amber-100 transition">
-            💬 Chat AI
-          </button>
+
         </div>
         <div class="flex md:order-2 fadein-bot">
           <a href="https://github.com/NathanzZ-Ginting">
@@ -33,11 +31,6 @@
     <div class="md:mt-[100px]">
       <router-view />
     </div>
-
-    <!-- Chat AI Component -->
-    <div v-if="showChat" class="chat-container">
-      <ChatAI />
-    </div>
   </div>
 
   <!-- Footer Mobile -->
@@ -54,33 +47,11 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import { useRouter } from "vue-router";
-import ChatAI from "./components/ChatAI.vue";
+
 
 const router = useRouter();
 const redirectToHome = () => {
   router.push("/");
 };
-
-// Toggle Chat AI
-const showChat = ref(false);
-const toggleChat = () => {
-  showChat.value = !showChat.value;
-};
 </script>
-
-<style scoped>
-/* Styling untuk Chat AI */
-.chat-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
-  background: #222;
-  padding: 15px;
-  border-radius: 10px;
-  color: white;
-  box-shadow: 0px 0px 10px rgba(255, 255, 112, 0.6);
-}
-</style>
