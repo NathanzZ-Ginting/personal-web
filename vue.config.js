@@ -1,5 +1,5 @@
-
 const { defineConfig } = require('@vue/cli-service')
+
 module.exports = defineConfig({
   transpileDependencies: true,
   configureWebpack: {
@@ -14,6 +14,28 @@ module.exports = defineConfig({
         "crypto": require.resolve("crypto-browserify"),
         "assert": require.resolve("assert/")
       }
+    }
+  },
+  pwa: {
+    name: 'Joenathan Web',
+    themeColor: '#42b983',
+    msTileColor: '#ffffff',
+    display: 'standalone',
+    backgroundColor: '#ffffff',
+    manifestOptions: {
+      short_name: 'Nathan',
+      icons: [
+        {
+          src: 'img/icons/icon-192x192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: 'img/icons/icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png'
+        }
+      ]
     }
   }
 })

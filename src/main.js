@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import './assets/tailwind.css'
 import mitt from "mitt";
+import './registerServiceWorker'
 
 const emitter = mitt();
 window.emitter = emitter; // Ini membuat emitter bisa diakses dari console
