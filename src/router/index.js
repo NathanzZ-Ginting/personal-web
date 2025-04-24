@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
+
 const routes = [
   {
     path: '/',
@@ -36,7 +37,7 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: () => import('../components/ContactForm.vue'),
-    meta: { title: 'Contact' }
+    meta: { title: 'Contact', requiresAuth: true }
   },
 
 ]
